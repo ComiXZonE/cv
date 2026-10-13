@@ -72,7 +72,8 @@ experiences:
       - Wrote pytest unit tests for critical-path methods of the conversion tool, using mock input data with expected outputs to validate correctness
       - Took part in a rotating duty maintaining the team's nightly Jenkins regression pipeline, which built the conversion tool release and validated it against a suite of neural networks by comparing outputs to expected results
       - Built video capture and storage pipelines on embedded Linux using a Switchtec PCIe switch, hot-swappable SSD rack and ROS2, recording multi-modal video and CAN bus streams for automotive computer vision training datasets
-      - Participated in bringup of the video capture board, read the Switchtec PCIe switch datasheet to verify pin configuration for optimal lane assignment and validated software-side device enumeration and configuration  - role: Intern
+      - Participated in bringup of the video capture board, read the Switchtec PCIe switch datasheet to verify pin configuration for optimal lane assignment and validated software-side device enumeration and configuration
+  - role: Intern
     time: February 2017 - September 2017
     company: RT-RK, Belgrade
     details: |
