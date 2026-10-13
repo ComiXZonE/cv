@@ -5,12 +5,12 @@ sidebar:
 
   # Profile information
   name: Nikola Trifunovic
-  tagline: Embedded Software Engineer | Real-Time Systems
+  tagline: Senior C++ Engineer | Performance-Critical Systems
 
   # Sidebar links
   email: trifunovic.nikola94@gmail.com
   phone: +381 6435 44466
-  timezone: Serbia/Belgrade
+  timezone: Europe/Belgrade
   linkedin: https://www.linkedin.com/in/nikola-trifunovic
 
   languages:
@@ -20,7 +20,7 @@ sidebar:
       level: Native
 
     - idiom: English
-      level: Professional
+      level: Fluent
 
     - idiom: French
       level: Basic
@@ -44,12 +44,13 @@ experiences:
   title: Experience
   info:
   - role: Senior Programmer
-    time: November 2024 - Present
+    time: November 2024 - July 2026
     company: Ubisoft, Belgrade
     details: |
       - Shipped Animus Hub across Assassin's Creed Shadows and Black Flag Resynced, a cross-title in-game portal unifying progression tracking, content discovery, upsell and preorder flows
-      - Implemented the IPC layer between Ultralight (a GPU-accelerated renderer embedded in Ubisoft's Anvil engine) and the game runtime: heartbeat timers, event dispatch, bidirectional data exchange and state synchronization
-      - Built real-time data pipelines exposing live game state to the UI layer, with minimal per-frame overhead
+      - Defined method names, message formats and viewmodel data with web programmers and UI integrators for each feature
+      - Declared C++ bindings and implemented callbacks for bidirectional calls between the game runtime and Ultralight (GPU-accelerated renderer embedded in Ubisoft's Anvil engine), feeding live game state to the UI with minimal per-frame overhead
+      - Implemented the C++ side of the heartbeat mechanism: reset watchdog timers on each heartbeat from the web layer and handled the failure case when heartbeats stopped arriving
       - Owned end-to-end delivery of features within a multi-platform runtime environment (PC, PS5, Xbox Series X)
       - Mentored and onboarded engineers on engine workflows and codebase conventions
   - role: UI Programmer
@@ -57,22 +58,21 @@ experiences:
     company: Ubisoft, Belgrade
     details: |
       - Developed the founding prototype of Animus Hub, defining the initial system architecture and cross-subsystem integration contracts that shaped its production design
-      - Implemented C++ component logic within Ubisoft's Anvil engine, transforming gameplay state into compact data structures optimized for real-time, frame-budget-aware execution
+      - Implemented C++ component logic within Ubisoft's Anvil engine, transforming gameplay state into data structures for the UI layer while meeting the game's strict frame-rate requirements
       - Delivered and maintained cross-platform compatibility across PC, PS5, Xbox Series X and Google Stadia, meeting platform certification requirements for each target
       - Owned the Maintenance mode feature for Skull and Bones: a runtime state machine blocking game access during server downtime with live countdown to service restoration
-      - Defined data contracts and integration protocols with art teams, reducing pipeline friction and iteration overhead across a multi-discipline production team
+      - Defined feature-specific data contracts with art teams across many shipped features in a multi-discipline production team
   - role: Embedded Software Engineer
     time: October 2017 - December 2020
     company: RT-RK, Belgrade
     details: |
-      - Built a Caffe model conversion pipeline in Python for a proprietary neural network accelerator, reduced models to hardware-supported node types and fused operation sequences (convolution, pooling, ReLU) into single accelerator cycles
+      - Reduced integral image execution time from 23ms to 16ms per 720p frame on TI TDA2x ADAS SoC by overlapping DMA transfers with computation and aligning data for cache-friendly access
+      - Built a Caffe model conversion pipeline in Python for a proprietary neural network accelerator, reducing models to hardware-supported node types and fusing operation sequences (convolution, pooling, ReLU) into single accelerator cycles
       - Developed an execution and memory scheduler in C that resolved layer-by-layer execution order and address-mapped buffer assignments into a custom binary, flashed via ARM core and consumed by the board's accelerator
       - Wrote pytest unit tests for critical-path methods of the conversion tool, using mock input data with expected outputs to validate correctness
       - Took part in a rotating duty maintaining the team's nightly Jenkins regression pipeline, which built the conversion tool release and validated it against a suite of neural networks by comparing outputs to expected results
-      - Built video capture and storage pipelines on embedded Linux using a Switchtec PCIe switch, hot-swappable SSD rack and ROS2, recorded multi-modal video and CAN bus streams for automotive computer vision training datasets
-      - Participated in bringup of the video capture board, read the Switchtec PCIe switch datasheet to verify pin configuration for optimal lane assignment and validated software-side device enumeration and configuration
-      - Reduced integral image execution time from 23ms to 16ms per 720p frame on TI TDA2x ADAS SoC through algorithmic and memory access pattern improvements
-  - role: Intern
+      - Built video capture and storage pipelines on embedded Linux using a Switchtec PCIe switch, hot-swappable SSD rack and ROS2, recording multi-modal video and CAN bus streams for automotive computer vision training datasets
+      - Participated in bringup of the video capture board, read the Switchtec PCIe switch datasheet to verify pin configuration for optimal lane assignment and validated software-side device enumeration and configuration  - role: Intern
     time: February 2017 - September 2017
     company: RT-RK, Belgrade
     details: |
@@ -95,6 +95,7 @@ tools:
   toolset:
   - name: "C++ (primary language, 5+ years)"
   - name: "C, Python"
+  - name: "C# (working knowledge), Sharpmake"
   - name: "pytest, Jenkins"
   - name: "TI TDA2x ADAS SoC, TI VisionSDK"
   - name: "PCIe, CAN"
