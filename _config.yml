@@ -1,8 +1,8 @@
 #Update all the sections by editing the data.yml file inside _data folder.
 
 # Site Settings
-title: Nikola Trifunovic | Game Programmer
-url: 'https://comixzone.github.io/cv_gaming'
+title: Nikola Trifunovic | Senior C++ Engineer
+url: 'https://comixzone.github.io/cv'
 
 #change it according to your repository name
 # disabling since we are using a custom domain
