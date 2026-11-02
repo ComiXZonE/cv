@@ -94,19 +94,22 @@ tools:
   title: Tools
 
   toolset:
-  - name: "C++ (primary language, 5+ years)"
-  - name: "C, Python"
-  - name: "C# (working knowledge), Sharpmake"
-  - name: "pytest, Jenkins"
-  - name: "TI TDA2x ADAS SoC, TI VisionSDK"
-  - name: "PCIe, CAN"
-  - name: "Embedded Linux, ROS2"
-  - name: "JTAG, UART"
-  - name: "Familiarity with CUDA"
-  - name: "Windows, Linux"
-  - name: "Visual Studio, Perforce, Git"
-  - name: "Cross-platform: PC, PlayStation 5, Xbox Series X"
-  - name: "Ubisoft Anvil Engine"
+  - category: Languages
+    name: "C++ (primary language, 5+ years), C, Python, C# (working knowledge)"
+  - category: GPU
+    name: "Familiarity with CUDA"
+  - category: Hardware
+    name: "TI TDA2x ADAS SoC, TI VisionSDK"
+  - category: Testing
+    name: "pytest, Jenkins"
+  - category: Embedded
+    name: "Embedded Linux, ROS2, PCIe, CAN, JTAG, UART"
+  - category: Environment
+    name: "Windows, Linux, Visual Studio, Perforce, Git"
+  - category: Platforms
+    name: "PC, PlayStation 5, Xbox Series X"
+  - category: Game engine
+    name: "Ubisoft Anvil Engine, Sharpmake"
 
 
 skills:
