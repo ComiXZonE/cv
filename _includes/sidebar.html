@@ -8,7 +8,7 @@
     {% endif %}
 
     {% if sidebar.tagline %}
-    <h3 class="tagline">{{ sidebar.tagline }}</h3>
+    <h3 class="tagline">{{ sidebar.tagline | replace: ' | ', '<br>' }}</h3>
     {% endif %}
 
   </div><!--//profile-container-->
@@ -20,6 +20,7 @@
   {% endif %}
 
   {% include language.html %}
+  {% include tools.html %}
   {% include interests.html %}
 
   {% if sidebar.about %}

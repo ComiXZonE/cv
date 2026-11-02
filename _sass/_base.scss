@@ -137,6 +137,14 @@ p {
       color: rgba(256, 256, 256, 0.6);
     }
   }
+  .tools-container {
+    .tool-category {
+      display: block;
+      color: rgba(256, 256, 256, 0.6);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
 
   .languages-list {
     margin-bottom: 0;
@@ -230,7 +238,7 @@ p {
       margin-bottom: 30px;
     }
     .item {
-      margin-bottom: 3px;
+      margin-bottom: 0;
     }
   }
   .oss-section {
@@ -265,7 +273,7 @@ p {
 
 .skillset {
   .item {
-    margin-bottom: 3px;
+    margin-bottom: 0;
     overflow: hidden;
   }
   .level-title {

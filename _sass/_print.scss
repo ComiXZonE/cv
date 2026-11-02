@@ -7,8 +7,94 @@
     background-color: white;
     padding: 0;
   }
+  // A4 is narrower than the 768px breakpoint, so undo the phone layout from _responsive.scss
   .wrapper {
     max-width: 100%;
+    display: grid;
+    // Blue background showed through as a line at page breaks; the sidebar paints its own
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .main-wrapper {
+    padding: 30px;
+  }
+
+  .sidebar-wrapper {
+    width: auto;
+
+    .profile-container,
+    .container-block {
+      padding: 20px;
+    }
+
+    .name {
+      font-size: 24px;
+    }
+
+    .tagline {
+      font-size: 13px;
+    }
+
+    // Keep each icon on the same line as its text, wrapping the text beside it
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      font-size: 11px;
+
+      a {
+        overflow-wrap: anywhere;
+      }
+    }
+
+    .contact-list .fas,
+    .contact-list .fab {
+      flex-shrink: 0;
+      width: 18px;
+      font-size: 14px;
+    }
+  }
+
+  .main-wrapper .time {
+    display: initial;
+    margin-top: 0;
+  }
+
+  .main-wrapper .upper-row {
+    margin-bottom: 2px;
+  }
+
+  .main-wrapper .item {
+    break-inside: avoid;
+  }
+
+  // Keep titles with their content; short sections stay whole
+  .main-wrapper .section-title {
+    break-after: avoid;
+  }
+
+  .summary-section,
+  .projects-section,
+  .skills-section {
+    break-inside: avoid;
+  }
+
+  // Margins are dropped at the top of a new page, padding is kept
+  .main-wrapper .section {
+    margin-bottom: 0;
+    padding-top: 30px;
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .main-wrapper .experiences-section .item {
+    margin-bottom: 0;
+    padding-top: 30px;
+    &:first-of-type {
+      padding-top: 0;
+    }
   }
 
   //   img.avatar {
@@ -16,7 +102,6 @@
   //     -webkit-filter: greyscale(1);
   //   }
   .main-wrapper .time {
-    padding: 10px 30px 10px 10px;
     //  float: right;
     //  color: black !important;
     -webkit-print-color-adjust: exact;
